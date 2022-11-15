@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-14T12:19:07 IST" name="Default suite" finished-at="2022-11-14T12:21:53 IST" duration-ms="165370">
+    <groups>
+    </groups>
+    <test started-at="2022-11-14T12:19:07 IST" name="Default test" finished-at="2022-11-14T12:21:53 IST" duration-ms="165370">
+      <class name="testcases.Break">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:07 IST" name="setUp" finished-at="2022-11-14T12:19:18 IST" duration-ms="10337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:18 IST" name="beforeMethod" finished-at="2022-11-14T12:19:18 IST" duration-ms="141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.Break.AddBreakValidationCheck()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="AddBreakValidationCheck()[pri:1, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:18 IST" name="AddBreakValidationCheck" finished-at="2022-11-14T12:19:49 IST" duration-ms="30848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBreakValidationCheck -->
+        <test-method is-config="true" signature="reportWrapUp(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:49 IST" name="reportWrapUp" finished-at="2022-11-14T12:19:49 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddBreakValidationCheck status=SUCCESS method=Break.AddBreakValidationCheck()[pri:1, instance:testcases.Break@6a28ffa4] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Break.AddBreakValidationCheck()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportWrapUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:49 IST" name="beforeMethod" finished-at="2022-11-14T12:19:49 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.Break.AddBreak()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="AddBreak()[pri:2, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:19:49 IST" name="AddBreak" finished-at="2022-11-14T12:20:53 IST" duration-ms="63839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBreak -->
+        <test-method is-config="true" signature="reportWrapUp(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:20:53 IST" name="reportWrapUp" finished-at="2022-11-14T12:20:53 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddBreak status=SUCCESS method=Break.AddBreak()[pri:2, instance:testcases.Break@6a28ffa4] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Break.AddBreak()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportWrapUp -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:20:53 IST" name="beforeMethod" finished-at="2022-11-14T12:20:53 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.Break.EditBreak()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="EditBreak()[pri:3, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:20:53 IST" name="EditBreak" finished-at="2022-11-14T12:21:52 IST" duration-ms="59615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditBreak -->
+        <test-method is-config="true" signature="reportWrapUp(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:21:52 IST" name="reportWrapUp" finished-at="2022-11-14T12:21:52 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EditBreak status=SUCCESS method=Break.EditBreak()[pri:3, instance:testcases.Break@6a28ffa4] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.Break.EditBreak()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportWrapUp -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:21:52 IST" name="closeBrowser" finished-at="2022-11-14T12:21:53 IST" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testcases.Break@6a28ffa4]" started-at="2022-11-14T12:21:53 IST" name="close" finished-at="2022-11-14T12:21:54 IST" duration-ms="1153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- testcases.Break -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
