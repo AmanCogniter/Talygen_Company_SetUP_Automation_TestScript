@@ -41,6 +41,7 @@ public class ShiftAction {
 		 shiftpage.enterFlexibleShiftName();
 		 shiftpage.startTime();
 		 shiftpage.endTime();
+		 shiftpage.breakShift();
 		 shiftpage.shiftRate();
 		 shiftpage.OverTimeRate();
 		 shiftpage.SelectLocation();
@@ -54,6 +55,7 @@ public class ShiftAction {
 		 shiftpage.enterShiftName();
 		 shiftpage.startTime();
 		 shiftpage.endTime();
+		 shiftpage.breakShift();
 		 shiftpage.shiftRate();
 		 shiftpage.OverTimeRate();
 		 shiftpage.SelectLocation();

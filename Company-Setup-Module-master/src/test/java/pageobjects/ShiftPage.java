@@ -173,8 +173,13 @@ public class ShiftPage extends WebBasePage {
 		{
 			click(By.xpath("//button[@title='Toggle Period']"), "Check AM and PM", 25);
 		}
+		 click(By.xpath("//table/tbody/tr/td/a/span[@class='fa fa-times text-dark']"), "Close end time picker popup", 25);
 	 }
-	 
+	 public void breakShift()
+	 {
+		 
+		 selectValueWithIndex(By.xpath("//div/tg-select/select[@id='breakId']"), 2, "Break", 30);
+	 }
 	  public void shiftRate()
 	  {
 		  enter(By.id("ShiftRate"), prop.getProperty("shiftrate"), "Shift Rate", 30);
@@ -187,7 +192,7 @@ public class ShiftPage extends WebBasePage {
 	  
 	   public void SelectLocation()
 	      {
-	    	  click(By.xpath("//span[text()='Select']"),"Location dropdown", 25);
+	    	  click(By.xpath("//div/span[text()='Select']"),"Location dropdown", 25);
 	    	 // WebElement LocationList = driver.findElement(By.id("CompantLocationSelect"));
 	    	  click(By.xpath("//ol[@class='scrollbar']/li[2]/a")," Select Location" , 25);
 	    	

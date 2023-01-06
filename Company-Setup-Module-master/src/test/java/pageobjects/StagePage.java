@@ -44,20 +44,20 @@ public class StagePage extends WebBasePage {
 	}
 
 	public void clickFullMenuDropDown() {
-		staticWait(2000);
+		staticWait(3000);
 		click(By.xpath("//span[text()='Full Menu']"), "Full Menu", 30);
 	
 	}
 
 	public void clickCompanySetupLink() {
-		staticWait(2000);
+		staticWait(3000);
 		//click(By.xpath("//a[contains(text(),'COMPANY SETUP')]"), "Company Setup Link", 30);
 		click(By.xpath("//li[@data-name='COMPANY SETUP']"),"Company Setup Link", 30);
 		
 	}
 
 	public void clickCompanySetupPage() {
-		staticWait(2000);
+		staticWait(3000);
 		click(By.xpath("(//a[contains(text(),'Company Setup')])[last()]"), " Company Setup Page", 30);
 	
 	}
@@ -69,7 +69,7 @@ public class StagePage extends WebBasePage {
 	
 	
 	public void clickOnAdd() {
-
+		staticWait(2000);
 		click(By.xpath("//a[@id='ancCreateStage']"), "Add Stage", 25);
 	}
 

@@ -6,7 +6,11 @@ import Action.AnnouncementAction;
 import Action.LoginAction;
 import utils.WebTestBase;
 import static reporting.ComplexReportFactory.getTest;
-
+/**
+ * 
+ * @author aanand
+ *
+ */
 public class Announcement extends WebTestBase 
 {
 

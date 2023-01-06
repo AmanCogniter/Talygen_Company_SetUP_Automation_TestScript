@@ -51,7 +51,7 @@ public class StatusAction {
 		 statuspage.clickOnAdd(); 
 		 statuspage.enterCrmStatusName();
 		 statuspage.selectCRMStatusType();
-		 statuspage.enterPercentage();
+		 //statuspage.enterPercentage();
 		 statuspage.enterDescription();
 		 statuspage.save(); 
 		 statuspage.verifyaddConfirmationMessage(); 

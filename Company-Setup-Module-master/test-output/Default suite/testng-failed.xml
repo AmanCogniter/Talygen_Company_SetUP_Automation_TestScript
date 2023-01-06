@@ -3,19 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TrainingFeedback">
+      <class name="testcases.Status">
         <methods>
-          <include name="TrainingFeedbacklisting"/>
-          <include name="editTrainingFeedback"/>
+          <include name="addStatus"/>
           <include name="closeBrowser"/>
           <include name="beforeMethod"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
-          <include name="addFeedbackValidationCheck"/>
-          <include name="addTrainingFeedback"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testcases.TrainingFeedback -->
+      </class> <!-- testcases.Status -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

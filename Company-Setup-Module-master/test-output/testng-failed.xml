@@ -3,18 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="TestName(failed)">
     <classes>
-      <class name="testcases.Question">
+      <class name="testcases.ReviewTemplate">
         <methods>
-          <include name="editQuestion"/>
           <include name="closeBrowser"/>
-          <include name="addQuestion"/>
+          <include name="validationCheck"/>
           <include name="beforeMethod"/>
-          <include name="priorityListing"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testcases.Question -->
+      </class> <!-- testcases.ReviewTemplate -->
     </classes>
   </test> <!-- TestName(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -35,20 +35,12 @@
         <class name="testcases.Status"/>
          <class name="testcases.TaxAndDiscount"/>
          <class name="testcases.TemplateMapping"/>
-         <!--class name="testcases.TrainingFeedback"/-->
+         <class name="testcases.TrainingFeedback"/>
          <class name="testcases.Trip"/>
           <class name="testcases.UserTitle"/>
           <class name="testcases.Venue"/>
            <!--<class name="testcases.LoginAuthorization"/> -->
-        
-        
-        
-      
-        
-        
-        
-            
-        </classes>
+ 		</classes>
 
 
     </test>
