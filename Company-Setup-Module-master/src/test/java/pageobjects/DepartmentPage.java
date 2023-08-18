@@ -18,19 +18,17 @@ import utils.PropertiesLoader;
 import utils.WebBasePage;
 
 public class DepartmentPage extends WebBasePage {
-	
-	
+
 	WebDriver driver;
 	String pattern = "yyMMddHHmmss";
 	Date date = new Date();
 	SimpleDateFormat dateformat = new SimpleDateFormat(pattern);
 	String datevalue = dateformat.format(date);
 
-
-	static String departmentname ;
-	static String departmentnameclientvisible ;
+	static String departmentname;
+	static String departmentnameclientvisible;
 	static String departmentDescription;
-	
+
 	static String Activestatus;
 	static String InActivestatus;
 	String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\testfiles\\";
@@ -42,15 +40,15 @@ public class DepartmentPage extends WebBasePage {
 		super(driver, "Category Page");
 		this.driver = driver;
 	}
-	
-	
+
 	public void clickFullMenuDropDown() {
 		click(By.cssSelector("a#navbarDropdownPortfolio"), "Full Menu", 30);
 		staticWait(2000);
 	}
 
 	public void clickCompanySetupLink() {
-		//click(By.xpath("//a[contains(text(),'COMPANY SETUP')]"), "Company Setup Link", 30);
+		// click(By.xpath("//a[contains(text(),'COMPANY SETUP')]"), "Company Setup
+		// Link", 30);
 		click(By.xpath("//li[@data-name='COMPANY SETUP']"), "Company Setup Link", 30);
 		staticWait(2000);
 	}
@@ -64,7 +62,7 @@ public class DepartmentPage extends WebBasePage {
 		click(By.xpath("//a[text()='Department']"), "Department Tab", 20);
 		staticWait(2000);
 	}
-	
+
 	public void AddButton() {
 		clickByJavascript(By.id("ancCreateDepartment"), "Add Department", 25);
 	}
@@ -73,8 +71,7 @@ public class DepartmentPage extends WebBasePage {
 		clickByJavascript(By.id("btnSave"), "save button", 30);
 		staticWait(2500);
 	}
-	
-	
+
 	public void VerifyMandatoryFieldValidation() {
 
 		int i = 0;
@@ -84,9 +81,10 @@ public class DepartmentPage extends WebBasePage {
 
 		List<WebElement> errorMessageLocator = findMultipleElement(
 				By.xpath("//div[@class='modal-content']//span[contains(@class,'invalid-feedback')]"), 45);
-		String[] expectedValue = { "Department Name"};
+		String[] expectedValue = { "Department Name" };
 		for (Object expected : expectedValue) {
-			WebElement asterikField = findElementVisibility(By.xpath("//label[text()='"+ expected +"']/ancestor::div[@class='form-group']/descendant::span[@class='mandatory']"), 45);
+			WebElement asterikField = findElementVisibility(By.xpath("//label[text()='" + expected
+					+ "']/ancestor::div[@class='form-group']/descendant::span[@class='mandatory']"), 45);
 
 			if (asterikField != null) {
 				getTest().log(LogStatus.PASS, "The Asterisk symbol is displayed for" + expected + " field");
@@ -119,122 +117,107 @@ public class DepartmentPage extends WebBasePage {
 
 		}
 	}
-	
+
 	public void cancelButton() {
 		clickByJavascript(By.id("ancgotolistscreen"), " Cancel Button", 25);
 	}
 
-	
 	public void openAndCloseUserGuide() {
 		click(By.xpath("//span[@class='user-guide']/a[@class='ancuserguide']"), "Open User Guide", 45);
 		click(By.xpath("//span[@class='user-guide']/a[@class='ancuserguide']"), "Close User Guide", 45);
 	}
-	
-	public void enterDepttNameNotVisibleClient()
-	{
-		
-		 departmentname = prop.getProperty("departmentname")+datevalue;
-	   
+
+	public void enterDepttNameNotVisibleClient() {
+
+		departmentname = prop.getProperty("departmentname") + datevalue;
+
 		enter(By.id("DepartmentName"), departmentname, " Department Name", 25);
 	}
-	
-	public void enterDepttNameVisibleClient()
-	{
-		
-		departmentnameclientvisible = prop.getProperty("departmentnameclientvisible")+datevalue;
-	   
+
+	public void enterDepttNameVisibleClient() {
+
+		departmentnameclientvisible = prop.getProperty("departmentnameclientvisible") + datevalue;
+
 		enter(By.id("DepartmentName"), departmentnameclientvisible, " Department Name", 25);
 	}
-	
-	public void departmentDesciption()
-	{
-		
-		departmentDescription=prop.getProperty("Description");
+
+	public void departmentDesciption() {
+
+		departmentDescription = prop.getProperty("Description");
 		enter(By.id("DepartmentDescription"), departmentDescription, "Department Description", 25);
 	}
-	
+
 	public void visibleToClient()
-	
+
 	{
 		click(By.xpath("//input[@id='isVisibleToClientN']/..//span/span[text()='No']"), "visibletoClient", 25);
 	}
-	
-	public void SearchCategory()
-	{
+
+	public void SearchCategory() {
 		enter(By.id("search"), departmentnameclientvisible, "Search Field ", 25);
 	}
-	
-	public void searchButton()
-	{
+
+	public void searchButton() {
 		clickByJavascript(By.id("Go"), " Search Button", 25);
 	}
-	
 
-	public void refresh()
-	{
-		clickByJavascript(By.xpath("//i[@class='fa fa-refresh']")," Refresh Button", 25);
+	public void refresh() {
+		clickByJavascript(By.xpath("//i[@class='fa fa-refresh']"), " Refresh Button", 25);
 	}
-	
-	
-	public void editDepartment()
-	{
+
+	public void editDepartment() {
 		clickByJavascript(By.id("ancEditdepartment"), "Edit Department", 25);
 	}
-	
-	public void selectcheckbox()
-	{
+
+	public void selectcheckbox() {
 		clickByJavascript(By.xpath("//input[@id='chk_1']"), "Click on checkbox", 25);
 	}
-	
-	public void selectAll()
-	{
+
+	public void selectAll() {
 		clickByJavascript(By.xpath("//input[@id='chkAll_0']"), "Select All", 25);
 	}
 
-	public void activeActionButton()
-	 {
-		 clickByJavascript(By.xpath("//a[@id='ancActInact']//span[contains(text(),' Active')]"),"Active Action Button", 20);
-		 String activeText = getText(By.xpath("//a[@id='ancActInact']//span"),24);
-		 Activestatus=activeText;
-	 }
-	 
-	 public void inactiveActionButton()
-	 {
-	 clickByJavascript(By.xpath("//a[@id='ancActInact']//span[contains(text(),'  Inactive')]"),"Inactive Action Button", 20);
-	 String inactiveText = getText(By.xpath("//a[@id='ancActInact']//span"),24);
-	 InActivestatus=inactiveText;
-	 }
-	 public void okConfirmButton()
-	 {
-		 click(By.xpath("//button[@title='OK']"),"ok Button", 20);
-		 staticWait(2000);
-		 driver.navigate().refresh();
-			/*
-			 *  WebElement
-			 * statuselement
-			 * =driver.findElement(By.xpath("//div[@class='cstm-drop-btn']/select")); Select
-			 * select = new Select(statuselement); String selectedValue=
-			 * select.getFirstSelectedOption().getText(); System.out.println(selectedValue);
-			 */
-	 }
-	 
-	 public void verifyActiveStatusValue()
-	 {
-		 verifySelectedValue(By.xpath("//div[@class='cstm-drop-btn']/select"), "Department Status Value", prop.getProperty("activeStatus"), 20);
-	 }
-	 public void verifyInactiveStatusValue()
-	 {
-		 verifySelectedValue(By.xpath("//div[@class='cstm-drop-btn']/select"), "Department Status Value", prop.getProperty("inactiveStatus"), 20);
-	 }
-	 
-	 public void deleteButton()
-	 { 
-		 
-		 click(By.id("DeleteMultiple"), "Delete Button",25);
-		 
-	 }
-	
-	
+	public void activeActionButton() {
+		clickByJavascript(By.xpath("//a[@id='ancActInact']//span[contains(text(),' Active')]"), "Active Action Button",
+				20);
+		String activeText = getText(By.xpath("//a[@id='ancActInact']//span"), 24);
+		Activestatus = activeText;
+	}
 
-	
+	public void inactiveActionButton() {
+		clickByJavascript(By.xpath("//a[@id='ancActInact']//span[contains(text(),'  Inactive')]"),
+				"Inactive Action Button", 20);
+		String inactiveText = getText(By.xpath("//a[@id='ancActInact']//span"), 24);
+		InActivestatus = inactiveText;
+	}
+
+	public void okConfirmButton() {
+		staticWait(2000);
+		click(By.xpath("//button[@title='OK']"), "ok Button", 20);
+		staticWait(2000);
+		driver.navigate().refresh();
+		/*
+		 * WebElement statuselement
+		 * =driver.findElement(By.xpath("//div[@class='cstm-drop-btn']/select")); Select
+		 * select = new Select(statuselement); String selectedValue=
+		 * select.getFirstSelectedOption().getText(); System.out.println(selectedValue);
+		 */
+	}
+
+	public void verifyActiveStatusValue() {
+		verifySelectedValue(By.xpath("//div[@class='cstm-drop-btn']/select"), "Department Status Value",
+				prop.getProperty("activeStatus"), 20);
+	}
+
+	public void verifyInactiveStatusValue() {
+		verifySelectedValue(By.xpath("//div[@class='cstm-drop-btn']/select"), "Department Status Value",
+				prop.getProperty("inactiveStatus"), 20);
+	}
+
+	public void deleteButton() {
+		staticWait(2000);
+		click(By.id("DeleteMultiple"), "Delete Button", 25);
+
+	}
+
 }

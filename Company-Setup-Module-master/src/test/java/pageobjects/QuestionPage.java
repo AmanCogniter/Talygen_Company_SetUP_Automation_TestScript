@@ -136,10 +136,11 @@ public class QuestionPage extends WebBasePage{
 	
 	public void verifyAddConfirmationMessage()
 	{
-		staticWait(2000);
-		findElementVisibility(By.xpath("//div[@id='notifymessage']/div/span"), 30);
-		String  Message = driver.findElement(By.xpath("//div[@id='notifymessage']/div/span")).getText(); 
-		 if(Message.equalsIgnoreCase("Question has been successfully added."))
+		staticWait(1000);
+		//findElementVisibility(By.xpath("//div[@id='notifymessage']/div/span"), 30);
+		  String message = driver.findElement(By.xpath("//div/span[contains(text(),'Question successfully added')]")).getText();
+		  if(message.equalsIgnoreCase("Question successfully added."))
+		//if(message.isDisplayed())
 		 {
 			 getTest().log(LogStatus.PASS, "Question has been successfully added.");
             logger.info("Question has been successfully added.");	

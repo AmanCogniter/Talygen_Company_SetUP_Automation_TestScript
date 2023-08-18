@@ -26,7 +26,7 @@ public class BreakPage extends WebBasePage
 	 SimpleDateFormat dateformat = new SimpleDateFormat(pattern);
 	 String datevalue = dateformat.format(date);
 		 
-	  static  String breakname;
+	  public static String breakname;
 	 String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\testfiles\\";
 	    private final static String FILE_NAME = System.getProperty("user.dir")+"\\src\\main\\resources\\testdata.properties";
 	    private static Properties prop = new PropertiesLoader(FILE_NAME).load();
@@ -157,9 +157,12 @@ public class BreakPage extends WebBasePage
 	   public void SearchBreak()
 	   {
 		  // System.out.println("Check"+breakname);
-		   
-		     String searchinput = "//input[@id='search']";
-			    enter(By.xpath(searchinput),BreakPage.breakname, "Enter Break Name in Search", 25);
+		   staticWait(2000);
+		     String searchinput = "//div/input[@id='search']";
+		     click(By.xpath("//div/input[@id='search']"), "Text Feild Click", 25);	   
+			   staticWait(2000);
+		     
+			    enter(By.xpath("//input[@id='search']"),BreakPage.breakname, "Enter Break Name in Search", 25);
 		   
 	
 		  
@@ -168,6 +171,16 @@ public class BreakPage extends WebBasePage
 	   {
 		   clickByJavascript(By.xpath("//a[@id='Go']"), "Search Button Click", 25);	   
 		   staticWait(2000);
+		   try {
+			   String searchBreak = driver.findElement(By.xpath("//table/tbody/tr/td/a[@id='ancEditshift']")).getText();
+			if (breakname.equals(searchBreak)) {
+				logger.info("Break Name Displayed successfully");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			logger.info("Break Name not Displayed successfully");
+			e.printStackTrace();
+		}
 	   }
 	    
 	   public void Resetbutton() {
@@ -192,7 +205,7 @@ public class BreakPage extends WebBasePage
 	   }
 	   public void EnableIsBillable()
 	   {
-		   clickByJavascript(By.xpath("//input[@id='isBillableBreakN']"), "Click on Is Billable", 30);
+		   click(By.xpath("//span[@class='slider round']/span[text()='UnPaid']"), "Click on Is Billable", 30);
 	   }
 	   
 	   public void ActiveToInActive()
@@ -215,5 +228,21 @@ public class BreakPage extends WebBasePage
 	    	 //TitleName = AnnouncementName;
 	    	 //staticWait(2000);
 	     }
+	     public void ClickOnDelete()
+		   {
+			   clickByJavascript(By.xpath("//a[@id='DeleteMultiple']"), "Delete Button", 25);
+			   click(By.xpath("//button[@title='OK']"),"Confirmation popup", 20);
+			   try {
+				WebElement message = driver.findElement(By.xpath("//div/span[contains(text(),'Break has been successfully deleted')]"));
+				if (message.isDisplayed()) {
+					logger.info("Break Deleted successfully");
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+				logger.info("Break didn't Deleted successfully");
+				e.printStackTrace();
+			}
+			   
+		   }
 
 }

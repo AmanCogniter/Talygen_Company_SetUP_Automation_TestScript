@@ -44,24 +44,18 @@ public class BreakAction {
 		breakpage.SaveButton();	
 		breakpage.HandleSuccessMessage();
 		
-		breakpage.SearchBreak();
-		breakpage.searchButton();
-		breakpage.SelectSingleCheckBox();
-		breakpage.ActiveToInActive();
-		breakpage.HandleSuccessMessage();
-		breakpage.SelectSingleCheckBox();
-		breakpage.InActiveToActive();
-		breakpage.HandleSuccessMessage();
-		breakpage.Resetbutton();
+		
 	}
 	
 	//   search functionality with logoutlogin shows error message "StaleRefernceElementException"  . 
-	/*
-	 * public void SearchBreak() { breakpage.SearchBreak();
-	 * breakpage.searchButton(); breakpage.Resetbutton();
-	 * 
-	 * }
-	 */
+	
+	  public void SearchBreak() {
+		  breakpage.SearchBreak();
+	  breakpage.searchButton(); 
+	  breakpage.Resetbutton();
+	  
+	  }
+	 
 	public void EditBreak()
 	{
 		breakpage.BreakNameSorting();
@@ -70,10 +64,21 @@ public class BreakAction {
 		breakpage.SaveButton();
 	}
 	
-	 public void ActiveInActive()
+	 public void ActiveInActiveAndDelete()
 	 {
-		 breakpage.SearchBreak();
+			breakpage.SearchBreak();
 			breakpage.searchButton();
+			breakpage.SelectSingleCheckBox();
+			breakpage.ActiveToInActive();
+			breakpage.HandleSuccessMessage();
+			breakpage.SelectSingleCheckBox();
+			breakpage.InActiveToActive();
+			breakpage.HandleSuccessMessage();
+			breakpage.Resetbutton();
+			breakpage.SearchBreak();
+			breakpage.searchButton();
+			breakpage.SelectSingleCheckBox();
+			breakpage.ClickOnDelete();
 			
 		 
 	 }

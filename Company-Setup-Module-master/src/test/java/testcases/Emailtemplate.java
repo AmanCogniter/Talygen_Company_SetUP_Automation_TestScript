@@ -65,10 +65,11 @@ public class Emailtemplate extends WebTestBase {
 		emailtemplateaction.customTemplate();
 		
 		emailtemplateaction.addDetailAdvancedTemplate();
+		emailtemplateaction.delete();
 	
 		
 	}
-	//@Test(priority=6)
+	@Test(priority=6)
 	public void addEmailTemplateCatogeryAsGreeting() {
 		test=getTest( Screenname  + ": Add  Email Template with Greeting catogery ");
 		EmailTemplateAction emailtemplateaction = new EmailTemplateAction (driver);

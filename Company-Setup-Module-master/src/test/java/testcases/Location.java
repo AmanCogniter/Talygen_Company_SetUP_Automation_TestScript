@@ -14,7 +14,7 @@ public class Location extends WebTestBase {
 	static String Screenname = "<b> Location </b>";
 	
 	
-	@Test (enabled = false)
+	@Test (enabled = true)
 	public void addParentLocationValidation()
 	{
 		test = getTest( Screenname + ":  Validation check of Parent Location and Userguide Check and cancel button on Add Parent Location Screen");

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TestName(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.ReviewTemplate">
+      <class name="testcases.CompanyHolidays">
         <methods>
           <include name="closeBrowser"/>
-          <include name="validationCheck"/>
           <include name="beforeMethod"/>
+          <include name="ActiveInactiveSearch"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
+          <include name="AddCompanyHolidayFullDay"/>
         </methods>
-      </class> <!-- testcases.ReviewTemplate -->
+      </class> <!-- testcases.CompanyHolidays -->
     </classes>
-  </test> <!-- TestName(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

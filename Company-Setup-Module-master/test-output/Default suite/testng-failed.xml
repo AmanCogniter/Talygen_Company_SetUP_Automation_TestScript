@@ -3,16 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.Status">
+      <class name="testcases.CompanyHolidays">
         <methods>
-          <include name="addStatus"/>
           <include name="closeBrowser"/>
           <include name="beforeMethod"/>
+          <include name="ActiveInactiveSearch"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
+          <include name="AddCompanyHolidayFullDay"/>
         </methods>
-      </class> <!-- testcases.Status -->
+      </class> <!-- testcases.CompanyHolidays -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

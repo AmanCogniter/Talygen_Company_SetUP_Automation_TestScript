@@ -13,7 +13,7 @@ import utils.WebTestBase;
 public class Priority  extends WebTestBase{
 	
 	static String Screenname ="<b> Priority </b>";
-	//WebDriver driver ;
+	
 	
 	@Test(priority=1)
 	public void validationCheck()

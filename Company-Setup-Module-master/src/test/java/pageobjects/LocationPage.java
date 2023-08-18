@@ -160,7 +160,7 @@ public class LocationPage extends WebBasePage {
 					By.xpath("//div[@class='modal-content']//span[contains(@class,'invalid-feedback')]"), 45);
 			String[] expectedValue = {"Location Name","Address Line 1","City","Country"};
 			for (Object expected : expectedValue) {
-				WebElement asterikField = findElementVisibility(By.xpath("//label[text()='" + expected + ":']/span"), 45);
+				WebElement asterikField = findElementVisibility(By.xpath("//label[contains(text(),'"+expected+"')]/parent::tg-input/descendant::span[contains(text(),'*')]"), 45);
 
 				if (asterikField != null) {
 					getTest().log(LogStatus.PASS, "The Asterisk symbol is displayed for" + expected + " field");
@@ -195,12 +195,15 @@ public class LocationPage extends WebBasePage {
 		}
 		
 		public void cancelButton() {
-			clickByJavascript(By.id("ancgotolistscreen"), " Cancel Button", 25);
+			staticWait(2000);
+			clickByJavascript(By.xpath("//div/a[@data-original-title='Cancel']"), " Cancel Button", 25);
 		}
 
 		
 		public void openAndCloseUserGuide() {
+			staticWait(2000);
 			click(By.xpath("//span[@class='user-guide']/a[@class='ancuserguide']"), "Open User Guide", 45);
+			staticWait(2000);
 			click(By.xpath("//span[@class='user-guide']/a[@class='ancuserguide']"), "Close User Guide", 45);
 		}
 		
