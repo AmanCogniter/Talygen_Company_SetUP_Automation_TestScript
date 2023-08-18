@@ -153,6 +153,11 @@ public class CompanyHolidaysPage extends WebBasePage {
     	  clickByJavascript(By.xpath("//a[@id='btnSaveHoliday']"),"Save Holiday Button", 20); 
     	  waitForLoad(20);
       }
+      public void clickOnAddHoliDayInCheckBOx()
+      { staticWait(2000);
+    	  click(By.xpath("//input[@name='Company']/parent::div[@class='custom-control custom-checkbox']"),"Add HoliDay Check Box", 20); 
+    	  
+      }
       
    /*   public void VerifyMandatoryFieldValidation()
  	 {
@@ -280,9 +285,9 @@ public class CompanyHolidaysPage extends WebBasePage {
       
       public void SelectLocation()
       {
-    	  click(By.xpath("//span[text()='Select']"),"Location dropdown", 25);
+    	  click(By.xpath("(//div/button/span[text()='Select'])[last()]"),"Location dropdown", 25);
     	 // WebElement LocationList = driver.findElement(By.id("CompantLocationSelect"));
-    	  click(By.xpath("//ol[@class='scrollbar']/li[2]/a")," Select Location" , 25);
+    	  click(By.xpath("(//div/ul/li/a/label[contains(text(),'Dallas')])[last()]")," Select Location" , 25);
     	
       }
       
@@ -362,16 +367,16 @@ public class CompanyHolidaysPage extends WebBasePage {
     	
       }
       
-      public void EntertextSearchHoliday()
+      public void EntertextIntoNameSearchHoliday()
       {
-    	  enter(By.xpath("//input[@id='search']"), HolidayName, "Enter Search text", 35);
+    	  enter(By.xpath("//div/input[@name='HolidayName']"), HolidayName, "Enter Search text", 35);
 	    	 searchButton();
       }
     
       
       public void searchButton()
 	   {
-		   click(By.xpath("//a[@id='Go']"), "Search Button Click", 25);	   
+		   click(By.xpath("//a[@id='btnSearch']"), "Search Button", 25);	   
 		   staticWait(2000);
 	   }
       

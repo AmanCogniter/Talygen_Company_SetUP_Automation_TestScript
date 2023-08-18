@@ -3,16 +3,87 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="TestName(failed)">
     <classes>
-      <class name="testcases.ReviewTemplate">
+      <class name="testcases.CurrencyManagement">
         <methods>
+          <include name="addNewCurrencyAndDelete"/>
+          <include name="currencyValidationCheck"/>
           <include name="closeBrowser"/>
-          <include name="validationCheck"/>
           <include name="beforeMethod"/>
           <include name="close"/>
           <include name="reportWrapUp"/>
           <include name="setUp"/>
+          <include name="BasecurrencyDuplicateValidation"/>
+          <include name="SourcecurrencyDuplicateValidation"/>
         </methods>
-      </class> <!-- testcases.ReviewTemplate -->
+      </class> <!-- testcases.CurrencyManagement -->
+      <class name="testcases.Phase">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="phaseListing"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.Phase -->
+      <class name="testcases.IndustryType">
+        <methods>
+          <include name="IndustryTypeListing"/>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="editIndustryType"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="addIndustryType"/>
+          <include name="addIndustryTypeValidation"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.IndustryType -->
+      <class name="testcases.Designation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="designationListing"/>
+          <include name="addDesignation"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.Designation -->
+      <class name="testcases.CompanyHolidays">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="ActiveInactiveSearch"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.CompanyHolidays -->
+      <class name="testcases.Skill">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="EditSkill"/>
+          <include name="addSkill"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="SkillListing"/>
+          <include name="validationCheck"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.Skill -->
+      <class name="testcases.Greeting">
+        <methods>
+          <include name="addGreeting"/>
+          <include name="closeBrowser"/>
+          <include name="beforeMethod"/>
+          <include name="close"/>
+          <include name="reportWrapUp"/>
+          <include name="setUp"/>
+          <include name="validationCheck"/>
+        </methods>
+      </class> <!-- testcases.Greeting -->
     </classes>
   </test> <!-- TestName(failed) -->
 </suite> <!-- Failed suite [Suite] -->
